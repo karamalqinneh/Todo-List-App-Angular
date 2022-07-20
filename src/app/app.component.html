@@ -1,0 +1,5 @@
+<app-header text="TEST INPUT"></app-header>
+<div id="input-container">
+ <app-input (addItem)="addTodo($event)"></app-input>
+ <app-tasks [tasks]="allTasks" (deleteTask)="handleDeleteTask($event)"></app-tasks>
+</div>

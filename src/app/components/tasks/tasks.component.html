@@ -1,0 +1,9 @@
+<div>
+    <div *ngFor="let task of tasks" class="task-container">
+        <div class="container">
+            <input [ngStyle]="{'width': '1.25rem'}" type="checkbox" [checked]="task.state" (click)="toBeEdited = task.id; editTodo()">
+            <div [ngStyle]="{'margin-left': '1vw'}">{{task.name}}</div>
+        </div>
+        <fa-icon [icon]="faTrash" class="trash" (click)="toBeDeleted = task.id; deleteTodo()"></fa-icon>
+    </div>
+</div>
