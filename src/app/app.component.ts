@@ -26,7 +26,7 @@ export class AppComponent {
   }
 
   handleDeleteTask(event: any) {
-    console.log(event, 'FROM APP');
+    this.taskService.deleteTask(event);
     this.allTasks = this.allTasks.filter((task) => task.id !== event);
   }
 }

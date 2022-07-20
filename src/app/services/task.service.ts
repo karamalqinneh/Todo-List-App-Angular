@@ -31,4 +31,9 @@ export class TaskService {
     let response = this.http.get<Task[]>(this.apiUrl);
     return response;
   }
+
+  deleteTask(event: number) {
+    const url = `${this.apiUrl}/${event}`;
+    return this.http.delete(url);
+  }
 }
